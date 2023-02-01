@@ -16,8 +16,8 @@ import svelte from "@astrojs/svelte";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://example.com',
+  site: 'https://oluwapelps.com',
   integrations: [mdx(), sitemap(), tailwind(), react(), svelte()],
   output: "server",
-  adapter: cloudflare()
+  adapter: cloudflare({mode: "directory"})
 });
