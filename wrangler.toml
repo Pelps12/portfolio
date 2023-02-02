@@ -1,2 +1,0 @@
-name = "portfolio"
-compatibility_flags = [ "transformstream_enable_standard_constructor", "streams_enable_constructors" ]
