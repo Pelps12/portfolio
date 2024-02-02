@@ -8,6 +8,7 @@ import Hero from '../components/Hero.svelte';
 import '@fontsource/bodoni-moda';
 import Projects from '../components/Projects.svelte';
 import Upcoming from '../components/Upcoming.svelte';
+import Hmm from '../components/Hmm';
 ---
 
 <!DOCTYPE html>
@@ -15,13 +16,5 @@ import Upcoming from '../components/Upcoming.svelte';
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
-	<body class="bg-base-100">
-		<Navbar />
-		<main class="bg-base-200">
-			<Hero client:only="svelte" />
-			<Projects />
-			<Upcoming />
-		</main>
-		<Footer />
-	</body>
+	<Hmm client:only="react" />
 </html>

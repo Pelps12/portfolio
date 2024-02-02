@@ -1,13 +1,19 @@
 ---
 // If the user is not logged in, redirect them to the login page
-if (true) {
+import BaseHead from '../components/BaseHead.astro';
+import Hmm from '../components/Hmm';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
+/* if (true) {
 	return Astro.redirect('https://www.instagram.com/lovelynoe__/');
-}
+} */
 ---
 
 <html>
 	<!-- Page here... -->
-	<link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<link rel="icon" type="image/x-icon" href="/images/favicon.ico" /></head
+	>
 
-
+	<Hmm client:only="react" />
 </html>
