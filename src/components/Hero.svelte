@@ -1,4 +1,5 @@
 <script>
+
   const scrollIntoView = ({target}) => {
     const el = document.querySelector(target.getAttribute('href'));
     if(!el) return;
@@ -11,8 +12,9 @@
   }
 </script>
 
-<div class="hero min-h-screen bg-base-200">
-    <div class="hero-content text-center">
+<div class="hero min-h-screen">
+    <div class="hero-content text-center flex flex-col">
+      <img src="/profile.png" alt="Profile" width="100" height="100" class="rounded-full"/>
       <div class="max-w-md">
         <h1 class="text-5xl font-bold">Hey I'm Pelumi</h1>
         <p class="py-6">I'm a Computer Engineering Student at UT Dallas. I'm into backend development and artificial intelligence. 
