@@ -5,6 +5,8 @@ import Footer from '../components/Footer.svelte';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 import Navbar from '../components/Navbar.svelte';
 import Hero from '../components/Hero.svelte';
+import Experience from '../components/Experience.svelte';
+import Banner from '../components/Banner.svelte';
 import '@fontsource/bodoni-moda';
 import Projects from '../components/Projects.svelte';
 import Upcoming from '../components/Upcoming.svelte';
@@ -16,9 +18,11 @@ import Upcoming from '../components/Upcoming.svelte';
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
 	<main class="max-w-7xl mx-auto">
-		<Navbar />
+        <Banner client:load />
+		<Navbar client:load/>
 		<Hero client:load />
-		<Projects />
+		<Experience client:load />
+		<Projects client:load />
 		<Upcoming />
 	</main>
 </html>
